@@ -4,7 +4,7 @@
         @if (Anecdote.Content.Length >= 300)
         {
             <p class="card-text pre">
-                @Anecdote.Content.Substring(0, 300)<a href="/anecdote/@Anecdote.Id">...</a>
+                @Anecdote.Content.Substring(0, 300)<a href="/show/@Anecdote.Id">...</a>
             </p>
         }
         else
@@ -12,7 +12,7 @@
             <p class="card-text pre">@Anecdote.Content</p>
         }
         <p class="card-text">
-            <a href="/anecdote/@Anecdote.Id">Open</a>
+            <a href="/show/@Anecdote.Id">Open</a>
         </p>
         <p class="card-text">
             @foreach (var tag in Anecdote.Tags)
